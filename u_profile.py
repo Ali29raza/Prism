@@ -11,7 +11,6 @@ firebase_config = st.secrets["firebase"]
 
 
 # Setting up Firebase setup
-# cred = credentials.Certificate('prism-mvp-42011-firebase-adminsdk-fbsvc-8644aadc82.json')
 cred = credentials.Certificate(dict(firebase_config))
 if not firebase_admin._apps:
     firebase_admin.initialize_app(cred)
